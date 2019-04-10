@@ -14,6 +14,7 @@ class UserProfile(AbstractUser):
     mobile = models.CharField(max_length=11, verbose_name="电话")
     email = models.CharField(max_length=100, null=True, blank=True, verbose_name="邮箱")
     roles = models.CharField(max_length=100, null=True, blank=True, default="editor")
+    vjudge = models.CharField(max_length=100, null=True, )
 
     class Meta:
         verbose_name = "用户"

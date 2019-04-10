@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^info', views.get_user_info),
     url(r'^login', obtain_jwt_token),
     url(r'^logout', views.logout),
-    url(r'^register', views.register)
+    url(r'^register', views.register),
+    url(r'^saveUserInfo',views.save_user_info)
 ]

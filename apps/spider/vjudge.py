@@ -9,7 +9,8 @@ def crawl():
 
 
 def login(username, password):
-    url = "https://vjudge.net/user/login"
+    # url = "https://vjudge.net/user/login"
+    url = "https://vjudge.net/user/solveDetail/"
     headers = {
         'authority': 'vjudge.net',
         'method': 'POST',
@@ -30,8 +31,8 @@ def login(username, password):
         'username': username,
         'password': password
     }
-    response = session.request("POST", url, data=data, headers=headers)
-    print(response)
+    response = requests.post(url + username)
+    print(response.text)
 
 
 if __name__ == '__main__':
